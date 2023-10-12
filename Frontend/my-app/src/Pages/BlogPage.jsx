@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BlogPage() {
+function BlogPage(el) {
   return (
     <div>
       

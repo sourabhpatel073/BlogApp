@@ -12,7 +12,7 @@ function AllRoutes() {
   return (
     <div>
       <Routes>
-        <Route element={Home} path="/"/>
+        <Route element={<Home/>} path="/"/>
         <Route element={<PrivateRoute><Profile/></PrivateRoute>} path="/profile"/>
         <Route element={<Login/>} path="/login"/>
         <Route element={<Signup/>} path="/signup"/>

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios"
+import { useNavigate } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  let url = process.env.url;
+  let navigate=useNavigate()
+  let url ="http://127.0.0.1:8080";
   function HandleSub(e) {
     e.preventDefault();
     if (!email && !password) {
@@ -18,6 +20,8 @@ function Login() {
       });
     setEmail("");
     setPassword("");
+    navigate("/")
+    
   }
   return (
     <div>
@@ -45,10 +49,9 @@ function Login() {
         />
         <input
           placeholder="password"
-          type="password"
           value={password}
           onChange={(e) => {
-            setEmail(e.target.value);
+            setPassword(e.target.value);
           }}
         />
         <button type="submit" >Submit</button>
