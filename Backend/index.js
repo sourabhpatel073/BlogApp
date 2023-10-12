@@ -1,8 +1,10 @@
 const express=require("express")
 const { connection } = require("./db")
+const { UserRoute } = require("./Routes/UserRoutes")
 require("dotenv").config()
 let app=express()
 
+app.use("/user",UserRoute)
 
 app.listen(process.env.port,async()=>{
 
