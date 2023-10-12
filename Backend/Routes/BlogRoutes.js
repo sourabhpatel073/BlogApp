@@ -73,3 +73,5 @@ BlogRoute.delete("/delete/:BlogId",async(req,res)=>{
         res.status(400).send({"msg":"You are not Authorized for it"})
     }
 })
+
+module.exports={BlogRoute}
