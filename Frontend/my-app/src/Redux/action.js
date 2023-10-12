@@ -4,7 +4,7 @@ let url = "http://127.0.0.1:8080"
 export const getBlogs = (query) => (dispatch) => {
   dispatch({ type: "fethingDataReq"});
   axios
-    .get(`${url}/getall?q=${query}`)
+    .get(`${url}/getall`)
     .then((res) => {
       dispatch({ type: "fethingDataSuccess", payload: res.data });
     })
